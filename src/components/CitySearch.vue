@@ -51,7 +51,8 @@ export default {
   },
   components: {
     'weather-summary': WeatherSummary,
-    'weather-data': WeatherData
+    'weather-data': WeatherData,
+    'errors-data': ErrorsData
   }
 }
 </script>

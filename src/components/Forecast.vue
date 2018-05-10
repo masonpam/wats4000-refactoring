@@ -10,9 +10,9 @@
       <li v-for="forecast in weatherData.list">
         <h3>{{ forecast.dt|formatDate }}</h3>
    <!--Weather summary child-->
-         <weather-summary v-bind:weatherData="city.weather"></weather-summary>
+         <weather-summary v-bind:weatherData="forecast.weather"></weather-summary>
         <!--Weather data child-->
-        <weather-data v-bind:weatherData="city.main"></weather-data>    
+        <weather-data v-bind:weatherData="forecast.main"></weather-data>    
         </li>
     </ul>
     <!--Errors data child-->
@@ -73,7 +73,8 @@ export default {
   },
   components: {
     'weather-summary': WeatherSummary,
-    'weather-data': WeatherData
+    'weather-data': WeatherData,
+    'errors-data': ErrorsData
   }
 }
 </script>

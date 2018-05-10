@@ -7,9 +7,9 @@
     </p>
     <div v-if="weatherData && errors.length===0">
  <!--Weather summary child-->
-         <weather-summary v-bind:weatherData="city.weather"></weather-summary>
+         <weather-summary v-bind:weatherData="weatherData.weather"></weather-summary>
         <!--Weather data child-->
-        <weather-data v-bind:weatherData="city.main"></weather-data>    
+        <weather-data v-bind:weatherData="weatherData.main"></weather-data>    
         </li>
     </ul>
     <!--Errors data child-->
@@ -47,7 +47,8 @@ export default {
   },
   components: {
     'weather-summary': WeatherSummary,
-    'weather-data': WeatherData
+    'weather-data': WeatherData,
+    'errors-data': ErrorsData
   }
 }
 </script>
